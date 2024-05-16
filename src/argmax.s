@@ -32,7 +32,7 @@ argmax: # use t0~t1, a0~a1, s0~s1
     addi t1, x0, 1      # t1 = 1 ( int i = 1 )
     addi s0, s0, 4      # arr += 4
 loop_start:
-    bge t0, s1, loop_end        # if t0 >= s1 then loop_end
+    bge t1, s1, loop_end        # if t1 >= s1 then loop_end
     lw t2, 0(s0)                # t2 = arr[i]
     bge t0, t2, loop_continue   # if t0(tmp) >= t2(arr[i]) then loop_continue
     addi a0, t1, 0
